@@ -5,7 +5,7 @@ const articleRouter = require('./routes/articles')
 const methodOverride = require('method-override')
 const app = express()
 
-mongoose.connect('mongodb+srv://kumarvinay86618:Qwzx12,.@cluster0.nxbkwhx.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
+mongoose.connect('mongodb+srv://kumarvinay86618:Qwzx12,.@cluster0.t4qkgz9.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
 const db = mongoose.connection;
 db.on('error',console.error.bind(console,"error connection: "));
 db.once('open',()=>{console.log("connection is successful")});
@@ -21,6 +21,6 @@ app.get('/', async (req, res) => {
 
 app.use('/articles', articleRouter)
 
-app.listen(process.env.PORT ||8000,function(){
-  console.log("\n'server started port:8000'");
+app.listen(process.env.PORT ||3000,function(){
+  console.log("\n'server started'");
 });
