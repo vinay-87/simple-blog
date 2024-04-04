@@ -8,12 +8,12 @@
 </head>
 <body>
       <div class="container mt-4">
-      <h1 class="mb-1 text-dark" ><%=article.title%></h1>
+      <h1 class="mb-1 text-success " ><%=article.title%></h1>
       <div class="text-muted mb-2">
         <%=article.createdAt.toLocaleDateString() %>
       </div>
       <a href="/" class="btn btn-secondary ">All Articles</a>
-      <a href="/articles/edit/<%= article.id %>" class="btn btn-info">Edit</a>
+      <a href="/articles/edit/<%= article.id %>" class="btn border-primary">Edit</a>
      <div class="mt-4  ">
         <%- article.sanitizedHTML %>
      </div>
